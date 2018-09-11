@@ -23,8 +23,7 @@ class UsersController < ApplicationController
   end
   
   def destroy
-    # User.find(params[:id]).delete
-    user = User.find_by(name: params[:name]).delete
+    User.find(params[:id]).delete
     render json: User.all
   end
   
